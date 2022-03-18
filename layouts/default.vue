@@ -17,6 +17,30 @@
 						path: '/dashboard'
 					}">
 				</sidebar-item>
+
+				<sidebar-item
+					:link="{
+						name: 'Dispositivos',
+						icon: 'tim-icons icon-mobile',
+						path: '/dispositivos'
+					}">
+				</sidebar-item>
+
+				<sidebar-item
+					:link="{
+						name: 'Alarmas',
+						icon: 'tim-icons icon-volume-98',
+						path: '/alarmas'
+					}">
+				</sidebar-item>
+
+				<sidebar-item
+					:link="{
+						name: 'Plantillas',
+						icon: 'tim-icons icon-paper',
+						path: '/plantillas'
+					}">
+				</sidebar-item>
 			</template>
 		</side-bar>
 
@@ -31,7 +55,7 @@
 				@click="toggleSidebar"
 			>
 				<!-- Efecto de transición -->
-        		<zoom-center-transition :duration="200" mode="out-in">
+        		<zoom-center-transition :duration="1000" mode="out-in">
 					<!-- your content here -->
 					<nuxt></nuxt>
 				</zoom-center-transition>
