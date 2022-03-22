@@ -26,7 +26,7 @@
                         </base-input>
                     </div>
 
-                <div class="col-4">
+                    <div class="col-4">
                         <slot name="label">
                         <label> Plantilla </label>
                         </slot>
@@ -103,6 +103,8 @@
                 </el-table>
             </card>
         </div>
+
+        <Json :value="dispositivos"></Json>
     </div>
 </template>
 
