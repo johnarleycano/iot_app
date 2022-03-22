@@ -84,10 +84,17 @@
                     <el-table-column prop="nombrePlantilla" label="Plantilla"></el-table-column>
                     <el-table-column label="Acciones">
                         <div slot-scope="{row, $index}">
+                            <!-- Ícono -->
+                            <el-tooltip content="Indicador">
+                                <i class="fas fa-database" :class="{'text-success': row.reglaActualizador, 'text-dark': !row.reglaActualizador}"></i>
+                            </el-tooltip>
+                            
+                            <!-- Suiche -->
                             <el-tooltip content="Almacenar en base de datos">
                                 <base-switch :value="row.reglaActualizador" type="primary" onText="Si" offText="No" @click="actualizarEstadoReglaAlmacenador($index)"></base-switch>
                             </el-tooltip>
-
+                            
+                            <!-- Botón Borrar -->
                             <el-tooltip
                                 content="Borrar"
                                 effect="light"
